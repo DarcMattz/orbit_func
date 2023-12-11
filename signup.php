@@ -28,7 +28,7 @@
 <?php
 require 'database/config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['register'])) {
     if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password'])) {
         // Error handling for incomplete form
         echo "<script>Swal.fire({
